@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    {{- partial "head.html" . -}}
+    <body>
+
+
+
+
+        <div class="page">
+
+            {{- partial "header.html" . -}}
+
+
+    		<div class="main">
+
+                <div class="partial_content" id="welcome">
+                    {{- partial "welcome.html" . -}}
+                </div>
+
+                <div class="partial_content" id="login">
+                    {{- partial "login.html" . -}}
+                </div>
+
+                <div class="partial_content" id="main">
+                    {{- partial "main.html" . -}}
+                </div>
+
+                <div class="partial_content" id="service">
+                    {{- partial "service.html" . -}}
+                </div>
+
+                <div class="partial_content" id="call">
+                    {{- partial "call.html" . -}}
+                </div>
+
+                <div class="partial_content" id="vehicle_messages">
+                    {{- partial "vehicle_messages.html" . -}}
+                </div>
+
+                <div class="partial_content" id="messages">
+                    {{- partial "messages.html" . -}}
+                </div>
+
+                <div class="partial_content" id="deviations">
+                    {{- partial "deviations.html" . -}}
+                </div>
+
+                <div class="partial_content" id="settings">
+                    {{- partial "settings.html" . -}}
+                </div>
+
+
+    		</div>
+
+
+            {{- partial "footer.html" . -}}
+
+
+
+
+    	</div>
+    </body>
+</html>
