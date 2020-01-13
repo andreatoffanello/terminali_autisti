@@ -2,9 +2,9 @@
 
 $(document).ready( function() {
 
-// const swup = new Swup();
+	// const swup = new Swup();
 
-// bottom bar
+	// bottom bar
 
 	$(".bb_tab").click( function() {
 
@@ -34,7 +34,7 @@ $(document).ready( function() {
 
 	});
 
-// side menu open
+	// side menu open
 
 	$(".menu_item").click( function() {
 
