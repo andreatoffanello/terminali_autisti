@@ -305,3 +305,8 @@ body {
   -o-transition: 0.3s cubic-bezier(0.3, 0, 0, 1);
   transition: 0.3s cubic-bezier(0.3, 0, 0, 1);
 }
+
+.line_view {
+  display: grid;
+  grid-template-columns: 12rem 1fr;
+}

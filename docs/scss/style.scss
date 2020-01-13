@@ -232,3 +232,12 @@ body {
 		@include transition;
 	}
 }
+
+
+// pages
+
+
+.line_view {
+	display: grid;
+	grid-template-columns: 12rem 1fr;
+}
