@@ -3,7 +3,7 @@
 $(document).ready( function() {
 
 
-	$("#matr, #pwd, #serv").hide();
+	$("#matr, #pwd, #serv, #agent" ).hide();
 
 
 	$("#welcome").click( function() {
@@ -28,8 +28,16 @@ $(document).ready( function() {
 	});
 
 	$("#serv [data-confirm]").click( function() {
+		$("#serv").fadeOut(300, function() {
+			//Stuff to do *after* the animation takes place
+			$("#agent").fadeIn();
+		});
+	});
+
+	$("#agent [data-confirm]").click( function() {
 		$("#login").fadeOut(300, function() {
 			//Stuff to do *after* the animation takes place
+			$("#main").addClass("show");
 		});
 	});
 

@@ -74,6 +74,30 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
+.button {
+  display: inline-grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1.6rem;
+  padding: .8rem 1.6rem;
+  border: 0.2rem solid #fafafa;
+}
+
+.button span, .button i {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.buttons {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 1.6rem;
+}
+
+.buttons .button {
+  justify-self: center;
+}
+
 .page {
   display: grid;
   grid-template-rows: 5.6rem 1fr 8.0rem;
@@ -158,6 +182,31 @@ body {
   z-index: 1;
   display: grid;
   place-items: center;
+}
+
+.form h1 {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  margin-bottom: 3.2rem;
+  text-align: center;
+}
+
+.form input {
+  background: transparent;
+  border: none;
+  border-bottom: 0.2rem solid #fafafa;
+  height: auto;
+  color: #fafafa;
+  margin-bottom: 3.2rem;
+  text-align: center;
+  font-size: 2.4rem;
+  padding: .8rem;
+}
+
+.form .serv_number {
+  font-size: 4.8rem;
+  text-align: center;
+  margin-bottom: 3.2rem;
 }
 
 .bottombar {
