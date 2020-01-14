@@ -4,6 +4,7 @@ $(document).ready( function() {
 
 
 	$("#matr, #pwd, #serv, #agent" ).hide();
+	$(".partial_content").removeClass("show").hide();
 
 
 	$("#welcome").click( function() {
@@ -37,13 +38,16 @@ $(document).ready( function() {
 	$("#agent [data-confirm]").click( function() {
 		$("#login").fadeOut(300, function() {
 			//Stuff to do *after* the animation takes place
-			$("#main").addClass("show");
+			$("#main").show().addClass("show");
 		});
 	});
 
 	// const swup = new Swup();
 
 	// bottom bar
+
+
+
 
 	$(".bb_tab").click( function() {
 
@@ -77,5 +81,24 @@ $(document).ready( function() {
 	$(".menu_trigger").click( function() {
 		$(".side_menu").toggleClass("hidden");
 	});
+
+
+
+	// line sliding_stops
+	$(".sl_stop:nth-last-child(1)").addClass("actual");
+
+	function passStop() {
+		$(".actual").hide('slow', function(){
+			$(this).remove();
+			$(".sl_stop").last().addClass("actual");
+		});
+
+	};
+
+	$(".line_name").click(passStop);
+
+
+	// $(".sl_stop:nth-last-child(-n+3)").show();
+
 
 });
