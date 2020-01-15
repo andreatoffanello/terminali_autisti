@@ -443,6 +443,10 @@ body {
   font-size: 4.8rem;
 }
 
+.line_view .line_name .name_wrap {
+  padding-top: .8rem;
+}
+
 .line_view .time_indicator {
   text-align: center;
   padding: 1.6rem;
@@ -454,18 +458,18 @@ body {
 }
 
 .line_view .time_indicator.late i:first-child {
-  opacity: .5;
+  opacity: .2;
 }
 
 .line_view .time_indicator.late i:last-child {
   opacity: 1;
 }
 
-.line_view .time_indicator.late .plus {
+.line_view .time_indicator.late .icon_add {
   display: inline-block;
 }
 
-.line_view .time_indicator.late .minus {
+.line_view .time_indicator.late .icon_remove {
   display: none;
 }
 
@@ -478,14 +482,14 @@ body {
 }
 
 .line_view .time_indicator.early i:last-child {
-  opacity: .5;
+  opacity: .2;
 }
 
-.line_view .time_indicator.early .plus {
+.line_view .time_indicator.early .icon_add {
   display: none;
 }
 
-.line_view .time_indicator.early .minus {
+.line_view .time_indicator.early .icon_remove {
   display: inline-block;
 }
 
@@ -511,6 +515,11 @@ body {
 
 .line_view .time_indicator .minutes span.min {
   font-size: 1.6rem;
+}
+
+.line_view .time_indicator .minutes i, .line_view .time_indicator .minutes i:first-child {
+  font-size: 2.4rem;
+  opacity: 1;
 }
 
 .line_view .stops {
