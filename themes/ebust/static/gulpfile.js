@@ -48,7 +48,7 @@ var prefixerOptions = {
   // browsers: ['last 2 versions'],
 
   overrideBrowserslist: [
-    'last 10 version',
+    'last 50 version',
     '> 1%',
     'IE 8'
   ]

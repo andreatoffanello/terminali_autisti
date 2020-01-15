@@ -32,7 +32,8 @@ body {
 	&.big {
 		grid-template-columns: 1fr auto;
 		display: grid;
-		place-items: center;
+		justify-items: center;
+		align-items: center;
 		padding: 2.4rem;
 
 		&.mono {
@@ -46,6 +47,19 @@ body {
 
 		i {
 			font-size: 4.8rem;
+		}
+
+		&.msg {
+			margin-bottom: 1.6rem;
+			justify-items: inherit;
+
+			span.title {
+				text-align: left;
+			}
+
+			span.time {
+				text-align: right;
+			}
 		}
 	}
 
@@ -84,6 +98,7 @@ body {
 
 	.title {
 		grid-area: title;
+		text-transform: uppercase;
 	}
 }
 
@@ -164,6 +179,8 @@ body {
 	z-index: 1;
 	display: grid;
 	place-items: center;
+
+	display: none;
 }
 
 .form {
@@ -323,6 +340,7 @@ body {
 	.time_indicator {
 		text-align: center;
 		padding: 1.6rem;
+		width: 9rem;
 
 		&.late {
 			background: #D52723;
@@ -333,6 +351,14 @@ body {
 
 			i:last-child{
 				opacity: 1;
+			}
+
+			.plus {
+				display:inline-block;
+			}
+
+			.minus {
+				display:none;
 			}
 		}
 
@@ -345,6 +371,14 @@ body {
 
 			i:last-child{
 				opacity: .5;
+			}
+
+			.plus {
+				display:none;
+			}
+
+			.minus {
+				display:inline-block;
 			}
 		}
 
@@ -467,4 +501,25 @@ body {
 			}
 		}
 	}
+}
+
+.deviation {
+	border-bottom: .2rem solid $white;
+	padding-bottom: 1.6rem;
+	margin-bottom: 2.4rem;
+
+	.dev_title {
+		margin-bottom: .8rem;
+		font-size: 2.4rem;
+
+		i {
+			font-size: 2.4rem;
+		}
+	}
+
+	p {
+		font-size: 2.4rem;
+		margin-bottom: .8rem;
+	}
+
 }

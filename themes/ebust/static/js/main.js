@@ -100,5 +100,8 @@ $(document).ready( function() {
 
 	// $(".sl_stop:nth-last-child(-n+3)").show();
 
+	$(".time_indicator").click(function() {
+		$(this).toggleClass("early late");
+	});
 
 });
