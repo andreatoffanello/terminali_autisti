@@ -117,7 +117,14 @@ body {
 
 .button span, .button i {
   font-size: 2rem;
+}
+
+.button span {
   font-weight: 600;
+}
+
+.button i {
+  font-weight: 300;
 }
 
 .button.big {
@@ -280,7 +287,6 @@ body {
   z-index: 1;
   display: grid;
   place-items: center;
-  display: none;
 }
 
 .form h1 {
@@ -543,7 +549,7 @@ body {
 
 .line_view .stops .stop {
   display: grid;
-  grid-template-columns: subgrid;
+  grid-template-columns: auto 1fr;
   grid-gap: 2.4rem;
 }
 
