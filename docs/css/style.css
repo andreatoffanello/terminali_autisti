@@ -141,7 +141,7 @@ body {
 }
 
 .button.big i {
-  font-size: 4.8rem;
+  font-size: 3.2rem;
 }
 
 .button.big.msg {
@@ -342,6 +342,7 @@ body {
 .bottombar .bar {
   position: absolute;
   height: .6rem;
+  width: -webkit-calc(100% / 7);
   width: calc(100% / 7);
   bottom: 0;
   left: 0;
@@ -388,6 +389,7 @@ body {
   opacity: 0;
   -webkit-transform: translateY(200px);
       -ms-transform: translateY(200px);
+       -o-transform: translateY(200px);
           transform: translateY(200px);
   -webkit-transition: 0.3s cubic-bezier(0.3, 0, 0, 1);
   -o-transition: 0.3s cubic-bezier(0.3, 0, 0, 1);
@@ -399,6 +401,7 @@ body {
   opacity: 1;
   -webkit-transform: translateY(0);
       -ms-transform: translateY(0);
+       -o-transform: translateY(0);
           transform: translateY(0);
   -webkit-transition: 0.3s cubic-bezier(0.3, 0, 0, 1);
   -o-transition: 0.3s cubic-bezier(0.3, 0, 0, 1);
@@ -425,6 +428,7 @@ body {
   place-self: center;
   display: grid;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -439,6 +443,10 @@ body {
   font-size: 4.8rem;
 }
 
+.line_view .line_name .name_wrap {
+  padding-top: .8rem;
+}
+
 .line_view .time_indicator {
   text-align: center;
   padding: 1.6rem;
@@ -450,18 +458,18 @@ body {
 }
 
 .line_view .time_indicator.late i:first-child {
-  opacity: .5;
+  opacity: .2;
 }
 
 .line_view .time_indicator.late i:last-child {
   opacity: 1;
 }
 
-.line_view .time_indicator.late .plus {
+.line_view .time_indicator.late .icon_add {
   display: inline-block;
 }
 
-.line_view .time_indicator.late .minus {
+.line_view .time_indicator.late .icon_remove {
   display: none;
 }
 
@@ -474,14 +482,14 @@ body {
 }
 
 .line_view .time_indicator.early i:last-child {
-  opacity: .5;
+  opacity: .2;
 }
 
-.line_view .time_indicator.early .plus {
+.line_view .time_indicator.early .icon_add {
   display: none;
 }
 
-.line_view .time_indicator.early .minus {
+.line_view .time_indicator.early .icon_remove {
   display: inline-block;
 }
 
@@ -507,6 +515,11 @@ body {
 
 .line_view .time_indicator .minutes span.min {
   font-size: 1.6rem;
+}
+
+.line_view .time_indicator .minutes i, .line_view .time_indicator .minutes i:first-child {
+  font-size: 2.4rem;
+  opacity: 1;
 }
 
 .line_view .stops {
@@ -538,7 +551,8 @@ body {
   width: .8rem;
   height: .8rem;
   border: .4rem solid #fafafa;
-  border-radius: 50%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
   -webkit-align-self: center;
       -ms-flex-item-align: center;
           align-self: center;
@@ -585,7 +599,8 @@ body {
   width: .8rem;
   height: .8rem;
   border: .4rem solid #fafafa;
-  border-radius: 50%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
   -webkit-align-self: center;
       -ms-flex-item-align: center;
           align-self: center;
@@ -617,7 +632,14 @@ body {
 .deviation {
   border-bottom: 0.2rem solid #f0f0f0;
   padding-bottom: 1.6rem;
-  margin-bottom: 2.4rem;
+  margin-bottom: 3.2rem;
+  display: grid;
+  grid-template-columns: 3.2rem 1fr;
+  grid-gap: .8rem;
+}
+
+.deviation i {
+  font-size: 2.4rem;
 }
 
 .deviation .dev_title {
@@ -625,11 +647,9 @@ body {
   font-size: 2.4rem;
 }
 
-.deviation .dev_title i {
-  font-size: 2.4rem;
-}
-
 .deviation p {
   font-size: 2.4rem;
-  margin-bottom: .8rem;
+  line-height: 1.3;
+  top: -.3rem;
+  position: relative;
 }
