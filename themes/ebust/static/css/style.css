@@ -810,7 +810,7 @@ body.nav_open .navigator {
 
 .bottombar .bb_tab i {
   place-self: center;
-  font-size: 4rem;
+  font-size: 3.2rem;
   opacity: .5;
   -webkit-transition: 0.3s cubic-bezier(0.3, 0, 0, 1);
   -o-transition: 0.3s cubic-bezier(0.3, 0, 0, 1);
