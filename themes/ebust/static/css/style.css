@@ -555,6 +555,30 @@ img {
 body {
   background: #021126;
   font-family: "Source Sans Pro", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr;
+  grid-template-areas: "page nav";
+}
+
+body .page {
+  grid-area: page;
+}
+
+body .navigator {
+  grid-area: nav;
+  width: 0;
+  -webkit-transition: 0.3s cubic-bezier(0.3, 0, 0, 1);
+  -o-transition: 0.3s cubic-bezier(0.3, 0, 0, 1);
+  transition: 0.3s cubic-bezier(0.3, 0, 0, 1);
+}
+
+body.nav_open .navigator {
+  grid-area: nav;
+  width: 40vw;
+  -webkit-transition: 0.3s cubic-bezier(0.3, 0, 0, 1);
+  -o-transition: 0.3s cubic-bezier(0.3, 0, 0, 1);
+  transition: 0.3s cubic-bezier(0.3, 0, 0, 1);
 }
 
 .button {
@@ -636,7 +660,7 @@ body {
 
 .page {
   display: grid;
-  grid-template-rows: 5.6rem 1fr 8.0rem;
+  grid-template-rows: 5.6rem 1fr 6.4rem;
   height: 100vh;
 }
 

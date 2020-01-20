@@ -10,6 +10,30 @@ $background: $dark_blue;
 body {
 	background: $background;
 	font-family: $font;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	grid-template-rows: 1fr;
+	grid-template-areas:"page nav";
+
+	.page {
+		grid-area: page;
+	}
+
+	.navigator {
+		grid-area: nav;
+		width: 0;
+		@include transition;
+	}
+
+	&.nav_open {
+
+		.navigator {
+			grid-area: nav;
+			width: 40vw;
+			@include transition;
+		}
+
+	}
 }
 
 
@@ -89,7 +113,7 @@ body {
 
 .page {
 	display: grid;
-	grid-template-rows: 5.6rem 1fr 8.0rem;
+	grid-template-rows: 5.6rem 1fr 6.4rem;
 	height: 100vh;
 }
 
